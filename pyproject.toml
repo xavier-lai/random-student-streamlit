@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "random-student-streamlit"
-version = "0.1.0"
+version = "1.0.1"
 description = ""
 authors = ["Xavier Lai <xavier.l@cabaia.fr>"]
 readme = "README.md"
