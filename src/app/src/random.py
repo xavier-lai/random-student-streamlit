@@ -29,3 +29,9 @@ def get_random_student(
     selected_students.update(chosen_students)
 
     return chosen_students
+
+
+def get_order_order(number_of_groups: int):
+    order = list(range(number_of_groups))
+    random.shuffle(order)
+    return order
