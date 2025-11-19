@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "random-student-streamlit"
-version = "0.1.0"
+version = "1.0.2"
 description = ""
 authors = ["Xavier Lai <xavier.l@cabaia.fr>"]
 readme = "README.md"
@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 streamlit = "^1.40.1"
+python-dotenv = "^1.2.1"
 
 
 [tool.poetry.group.dev.dependencies]

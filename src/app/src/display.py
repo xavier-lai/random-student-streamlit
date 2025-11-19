@@ -108,3 +108,28 @@ def set_custom_css():
         """,
         unsafe_allow_html=True,
     )
+
+
+def display_order_groups(group_order: List[int]):
+    """
+    Display the oral presentation order of student groups using HTML bullets,
+    safely rendered by Streamlit.
+    """
+    if not group_order:
+        st.warning("Aucun ordre de passage n'a été défini.")
+        return
+
+    st.markdown(
+        "<h3 style='color:#8be9fd;'>📢 Ordre de passage des groupes :</h3>",
+        unsafe_allow_html=True,
+    )
+
+    # Construction propre du HTML (pas de multiline indenté → évite l’affichage brut)
+    list_items = "".join(
+        f"<li style='color:#50fa7b; font-size:20px; font-weight:bold;'>Groupe {num}</li>"
+        for num in group_order
+    )
+
+    html_list = f"<ul style='margin-left:20px;'>{list_items}</ul>"
+
+    st.markdown(html_list, unsafe_allow_html=True)
