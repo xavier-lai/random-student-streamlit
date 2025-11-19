@@ -1,9 +1,14 @@
 import streamlit as st
-
+from dotenv import load_dotenv
 from src.constants import STUDENTS_CONFIG
-from src.display import display_selected_candidates, set_custom_css, simulate_spinner
+from src.display import (
+    display_order_groups,
+    display_selected_candidates,
+    set_custom_css,
+    simulate_spinner,
+)
 from src.inputs import get_input_fields
-from src.random import get_random_student
+from src.random import get_order_order, get_random_student
 
 
 def reset_selected_students():
@@ -23,6 +28,10 @@ def main():
 
     # App title
     st.write("# 🎲 Pick Your Students")
+
+    if st.button("Choose Group Order"):
+        group_order_list = get_order_order(len(STUDENTS_CONFIG))
+        display_order_groups(group_order_list)
 
     # Get input fields
     number_of_students, student_group_to_exclude = get_input_fields()
@@ -64,4 +73,5 @@ def main():
 
 
 if __name__ == "__main__":
+    load_dotenv()
     main()

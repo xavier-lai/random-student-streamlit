@@ -1,32 +1,9 @@
+import os
+
 STUDENTS_CONFIG = {
-    1: [
-        "Mathurin Gesny",
-        "Yvan Lefevre",
-        "Manon Leonardi",
-        "Mathis Maitrallin",
-    ],
-    2: [
-        "Samuel Ballu",
-        "Emiliano Quenum",
-        "Paul Le Breton",
-        "Timothée Templier",
-    ],
-    3: [
-        "Titouan Cabon",
-        "Jeanne Leroux",
-        "Marjorie Lucas",
-        "Elise Mahé",
-    ],
-    4: [
-        "Robin Botrel",
-        "Gautier Francois ",
-        "Kevin Kenang",
-        "Paul Vallée ",
-    ],
-    5: [
-        "Loreleï Corvaisier",
-        "Manon Cousin",
-        "Sterenn Le Leannec",
-        "Sofiane Tareb",
-    ],
+    1: os.getenv("STUDENT_NAMES_GROUP_1", "").split(","),
+    2: os.getenv("STUDENT_NAMES_GROUP_2", "").split(","),
+    3: os.getenv("STUDENT_NAMES_GROUP_3", "").split(","),
+    4: os.getenv("STUDENT_NAMES_GROUP_4", "").split(","),
+    5: os.getenv("STUDENT_NAMES_GROUP_5", "").split(","),
 }
