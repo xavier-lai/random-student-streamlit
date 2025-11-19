@@ -32,6 +32,6 @@ def get_random_student(
 
 
 def get_order_order(number_of_groups: int):
-    order = list(range(number_of_groups))
+    order = list(range(1, number_of_groups + 1))
     random.shuffle(order)
     return order
